@@ -337,15 +337,15 @@
 // }
 // console.log(getShippingCost("Jamaica"));
 
-// 30   ДЛИНА СТРОКИ 
+// // 30   ДЛИНА СТРОКИ 
 
-function getNameLength(name) {
-    const lengthName = (name.length)
-  const message = `Name ${name} is ${lengthName} characters long`; // Change this line
+// function getNameLength(name) {
+//     const lengthName = (name.length)
+//   const message = `Name ${name} is ${lengthName} characters long`; // Change this line
 
-  return message;
-}
-console.log(getNameLength("Poly"));
+//   return message;
+// }
+// console.log(getNameLength("Poly"));
 
 // 31   ИНДЕКСАЦИЯ ЭЛЕМЕНТОВ СТРОКИ
 

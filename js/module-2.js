@@ -1121,16 +1121,18 @@
 
 // function includes(array, value) {
 //     // Change code below this line
+
+//     const rot =false;
   
-//     for (const item of array) {
+//     for (const include of array) {
           
-//       if(item === value) {
+//       if(include === value) {
 //         return true;
 //     } else {
 //         // console.log(false);
 //     }
 //       }
-//       return false;   
+//       return rot;   
 //     // Change code above this line
 //   }
 

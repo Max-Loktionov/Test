@@ -80,3 +80,104 @@
 // }
 
 // console.log( countBs("The quick brown foxb jumped over bb the lazy dog", 'b') );
+
+
+//  задача от Ашота plusOne
+// написать функцию, которая принимает массив с цифрами,
+// получить целое число и прибавить 1,
+// результат вернуть в виде массива
+
+// const plusOne = function (numbersArr) {
+   
+//     const newArray = [];
+//     let finalNumber = 0;
+//     let finalArray = [];
+//     const finishArray = [];
+
+//     for (let i = 0; i < numbersArr.length; i++) {
+        
+//         let total = 0;
+//         let element = 0;
+       
+//         element = (numbersArr[i]*Math.pow(10, (numbersArr.length - (i+1))));
+          
+//         newArray.push(element);
+
+//         for (const item of newArray) {
+//             total += item;
+//          }
+               
+//         finalNumber = total+1;
+
+//          console.log(finalNumber);
+//         console.log(newArray);
+//     }
+//     finalArray =  `${finalNumber}`.split('');
+
+//     for (const iterator of finalArray) {
+//         finishArray.push( Number(iterator));
+//     }
+ 
+
+// return finishArray;
+// }
+
+// console.log( plusOne([0]));
+// console.log( plusOne([5, 06, -7, -8, 8]));
+
+// ================================================================Annka
+
+// function plusOne(numbersArr) { 
+//     if (numbersArr.length === 0) return "Массив пустой"
+//     for (const number of numbersArr) { 
+//       if (typeof (number) != number) return `Элемент массива ${(number)+1 } : '${numbersArr[number]}' не число`
+//     }
+    
+//      const number = `${Number.parseInt(numbersArr.join('')) + 1}`;
+//      return number.split("")
+//   }
+  
+  
+//   console.log(plusOne([10, 11, 5, 3]));
+//   console.log(plusOne([1, 2, 3]));
+
+// function plusOne(numbersArr) { 
+//   if (numbersArr.length === 0) return "Массив пустой"
+//   for (const number of numbersArr) { 
+//     // if (typeof (number) != number) return `Элемент массива ${(number) + 1} : ${numbersArr[number]} не число`
+//   }
+  
+//    const number = `${Number.parseInt(numbersArr.join('')) + 1}`;
+//    return number.split("")
+// }
+
+
+// console.log(plusOne([4, 1, 3, '45', 5]));  // Элемент массива 5 : 5 не число
+// console.log(plusOne([ 1, 3, 5]));  //Элемент массива 2 : 3 не число 
+
+
+// // если убрать строку проверки на тип, то выходит так:
+// console.log(plusOne([4, 1, 3, '45', 5]));  // ['4', '1', '3', '4', '5', '6']
+// console.log(plusOne([ 1, 3, 5]));  //  ['1', '3', '6'] 
+
+// ============================================
+
+function plusOne(numbersArr) { 
+  if (numbersArr.length === 0) return "Массив пустой";
+  
+  for (let i = 1; i < numbersArr.length; i += 1) { 
+    if (typeof(numbersArr[i]) != 'number') { 
+       return `Элемент массива ${numbersArr[i]} не число`;
+    }
+
+    if (numbersArr[i] < 0) { 
+      return `Число ${numbersArr[i]} отрицательное`;
+    }
+  }
+
+   const number = `${Number.parseInt(numbersArr.join('')) + 1}`;
+   return number.split("")
+}
+
+
+console.log(plusOne([11, 123, 2]));
